@@ -3,21 +3,25 @@ This repository contains code required to analyze data in Courret et al. 2024 (h
 
 The directories contain the R code and the intermediate files necessary to make the Figures, and the bash script used to analyze the raw data. R scripts are organized by Figure type. The subdirectories contain code for three types of plots and the data analysis pipeline as follows:
 
-CoveragePlot
+__CoveragePlot__
 
-Description: This directory contains all the R scripts necessary to make Figures 1ADG-2-3-4AB-5-S1-S2-S2-S5. The R script require the library karyoploteR, regioneR, GenomicRanges, rtracklayer, IRanges, devtools, stringr. This folder contain a subfolder named "Reference" that contain the genome object (chromosome.size and "cytoband") necessary to make those figures. 
+_Description:_ This directory contains all the R scripts necessary to make Figures 1ADG-2-3-4AB-5-S1-S2-S2-S5. The R script require the library karyoploteR, regioneR, GenomicRanges, rtracklayer, IRanges, devtools, stringr. This folder contain a subfolder named "Reference" that contain the genome object (chromosome.size and "cytoband") necessary to make those figures. 
 
-IDR
+__G2-Jockey-3_evolution__
 
-Description: This directory contains the R scripts necessary to make Figure S4. This directory also contains the file necessary to make this figure: the chrome.size object and the q0.Top-idr (tab delimited file containing the top peaks conserved between replicates).
+_Description:_ This directory contains R scripts necessary to create phylogenetic trees. It requires the following libraries: ape, phytools, geiger, evobiR, ggplot2, dplyr, tidyr and ggtree. It also requires the tree files RAxML_bipartitions.alignment_jockey_family_Final.automre and RAxML_bipartitions.alignment_Jockey-3_melsimyak_400_ORF2_mafft_Jockey-1_Dse.automre, located in the Phylogeny directory here: https://doi.org/10.5061/dryad.1zcrjdg2g.
 
-TE_enrichment_Plot:
+__IDR__
+
+_Description:_ This directory contains the R scripts necessary to make Figure S4. This directory also contains the file necessary to make this figure: the chrome.size object and the q0.Top-idr (tab delimited file containing the top peaks conserved between replicates).
+
+__TE_enrichment_Plot__
 
 Description: This directory contains the R script necessary to make Figure 1BEH. This directory also contains the file necessary to make this figure: the "CID_RPM_Top_newname.out" is tab delimited file that contain the top most enriched TE.
 
-Pipeline 
+__Pipeline__
 
-Description : This directory contains the bash script used to analyzed the CUT&Tag data.
+_Description:_ This directory contains the bash script used to analyzed the CUT&Tag data.
 
 script: CutandTag.sh - performs the analysis of the CUT&Tag raw data to obtain the coverage plots. (for Figure 1ADG-2-3-4AB-5-S1-S2-S2-S5)
 
